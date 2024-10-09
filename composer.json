@@ -1,0 +1,6 @@
+{
+    "name": "mahmoud_moursi/concept",
+    "require": {
+        "phpmailer/phpmailer": "^6.9"
+    }
+}

@@ -1,0 +1,501 @@
+
+body {
+    margin: 0;
+    padding: 0;
+    padding-top: 50px; /* Adjust based on navbar height */
+
+}
+
+
+.hero-section {
+position: relative;
+height: 100vh;
+overflow: hidden;
+}
+
+
+#heroVideo {
+position: absolute;
+top: 50%;
+left: 50%;
+min-width: 100%;
+min-height: 100%;
+width: auto;
+height: auto;
+transform: translate(-50%, -50%);
+z-index: -1;
+}
+.hero-overlay {
+position: absolute;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background: rgba(0, 0, 0, 0.5);
+}
+
+.hero-content {
+position: relative;
+z-index: 1;
+color: white;
+text-align: center;
+top: 50%;
+transform: translateY(-50%);
+}
+
+/* Sector Sections Styles */
+#sectors {
+    width: 100%;
+    overflow: hidden;
+}
+
+.sector-section {
+    position: relative;
+    width: 100%;
+    min-height: 100vh; /* Ensures minimum height is full viewport */
+    height: 100vh;     /* Add this line */
+    overflow: hidden;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 50px;
+    box-sizing: border-box;
+    
+    
+}
+
+
+
+.sector-section:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.sector-content {
+    max-width: 800px;
+    text-align: center;
+    z-index: 1;
+}
+
+.sector-content h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+}
+
+.sector-content p {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+/* 
+.learn-more {
+    font-size: 1rem;
+    color: #ffffff;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.learn-more:hover {
+    text-decoration: underline;
+} */
+
+/* .interactive-element {
+    display: none;
+    margin-top: 20px;
+}
+
+.interactive-element.active {
+    display: block;
+}
+
+.interactive-element h3 {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+}
+
+.interactive-element p {
+    font-size: 1.1rem;
+    margin-bottom: 20px;
+} */
+.btn {
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-primary {
+    background-color: #0062E6;
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background-color: #0050c7;
+}
+
+/* .sector-image {
+    flex: 1;
+    position: relative;
+    overflow: hidden;
+}
+
+.sector-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.sector-image img:hover {
+    transform: scale(1.05);
+} */
+
+/* Sticky Navigation Styles */
+/* #sector-nav {
+    position: fixed;
+    top: 50%;
+    right: 20px;
+    transform: translateY(-50%);
+    z-index: 2;
+}
+
+#sector-nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#sector-nav li {
+    margin: 10px 0;
+}
+
+#sector-nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+#sector-nav a:hover {
+    color: #cccccc;
+} */
+
+
+.background-video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    min-width: 100%;
+    min-height: 100%;
+    width: auto;
+    height: auto;
+    z-index: -2;
+    transform: translate(-50%, -50%);
+    background-size: cover;
+    filter: brightness(0.7);
+    
+}
+
+.video-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Adjust opacity as needed */
+    z-index: -1;
+}
+
+.sector-section.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Side Navigation Container */
+#side-nav {
+    position: fixed;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    z-index: 1000;
+}
+
+/* Navigation Trigger Tab */
+#side-nav .nav-trigger {
+    background-color: #0064e667;
+    color: #fff;
+    padding: 10px 5px;
+    cursor: pointer;
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    font-size: 16px;
+    font-weight: bold;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+#side-nav .nav-trigger:hover {
+    background-color: #0050c7;
+}
+
+/* Navigation Menu */
+#side-nav .nav-menu {
+    position: absolute;
+    top: 0;
+    left: -200px; /* Hidden by default */
+    width: 200px;
+    background-color: rgba(0, 0, 0, 0.9); /* Dark background for visibility */
+    padding: 20px;
+    box-sizing: border-box;
+    transition: left 0.3s ease;
+}
+
+/* Show the menu on hover */
+#side-nav:hover .nav-menu {
+    left: 0;
+}
+
+/* Navigation Menu Styles */
+#side-nav .nav-menu ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+#side-nav .nav-menu li {
+    margin-bottom: 15px;
+}
+
+#side-nav .nav-menu a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+#side-nav .nav-menu a:hover {
+    text-decoration: underline;
+}
+
+/* Adjustments for Mobile Devices */
+@media (max-width: 768px) {
+    /* Increase the size of the trigger for touch accessibility */
+    #side-nav .nav-trigger {
+        padding: 15px 10px;
+        font-size: 18px;
+    }
+
+    /* Ensure the menu covers more area on small screens */
+    #side-nav .nav-menu {
+        width: 250px;
+    }
+}
+
+
+/* Modal Styles */
+/* .modal {
+    display: none; 
+    position: fixed;
+    z-index: 1000;
+    padding-top: 100px;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.7);
+}
+
+.modal-content {
+    background-color: #fff;
+    margin: auto;
+    padding: 40px;
+    border-radius: 10px;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+}
+
+.close-button {
+    color: #aaa;
+    position: absolute;
+    top: 15px;
+    right: 25px;
+    font-size: 30px;
+    font-weight: bold;
+    cursor: pointer;
+} */
+
+.close-button:hover,
+.close-button:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .sector-section {
+        flex-direction: column;
+        padding: 20px;
+    }
+    .sector-section:nth-child(even) {
+        flex-direction: column;
+    }
+    /* #sector-nav {
+        display: none;
+    } */
+}
+
+
+/* .sector-box {
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+.sector-box img {
+    max-width: 100%;
+    height: auto;
+}
+.sector-content {
+    flex-grow: 1;
+} */
+.explore-more {
+    margin-top: auto;
+}
+.sector-details {
+    display: none;
+    text-align: left;
+    margin-top: 20px;
+}
+.feature-item {
+cursor: pointer;
+transition: transform 0.2s;
+margin: 0 auto;
+text-align: center;
+}
+
+.feature-item:hover {
+transform: scale(1.05);
+}
+
+.feature-item i {
+margin-bottom: 10px;
+}
+
+.feature-item p {
+font-weight: bold;
+word-wrap: break-word;
+hyphens: auto;
+}
+
+
+.modal-body p {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+.cta-section {
+    background-color: #f8f9fa;
+}
+
+
+/* Equal height columns */
+/* @media (min-width: 768px) {
+    .sector-row {
+        display: flex;
+    }
+    .sector-row .col-md-4 {
+        display: flex;
+    }
+} */
+
+/* Testimonials Section */
+.carousel-item p {
+font-size: 1rem;
+line-height: 1.5;
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+background-color: #000;
+border-radius: 50%;
+}
+
+.carousel-indicators li {
+background-color: #000;
+}
+
+/* Case Study Section */
+/* .case-study img {
+border: 1px solid #ddd;
+border-radius: 5px;
+} */
+
+.carousel-indicators.position-static {
+position: static;
+margin-top: 15px;
+display: flex;
+justify-content: center;
+}
+
+.carousel-item img:not([src]) {
+display: none;
+}
+
+.carousel-item img[src=""] {
+display: none;
+}
+
+/* CTA Section Styling */
+.cta-section {
+color: #fff;
+background: linear-gradient(to right, #0062E6, #33AEFF);
+}
+
+.cta-section h2,
+.cta-section p {
+z-index: 1;
+position: relative;
+}
+
+.cta-section .btn {
+padding: 12px 24px;
+font-size: 1.1rem;
+border-radius: 4px;
+display: flex;
+align-items: center;
+}
+
+.cta-section .btn i {
+font-size: 1.2rem;
+}
+
+.btn-primary {
+background-color: #28a745;
+border-color: #28a745;
+}
+
+.btn-secondary {
+background-color: #17a2b8;
+border-color: #17a2b8;
+}
+
+.btn:hover {
+opacity: 0.9;
+}
+
+@media (max-width: 576px) {
+.cta-section h2 {
+font-size: 1.5rem;
+}
+.cta-section p {
+font-size: 1rem;
+}
+.cta-section .btn {
+font-size: 1rem;
+padding: 10px 20px;
+}
+}
+
